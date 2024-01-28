@@ -1,0 +1,15 @@
+.carousel-section {
+  &__top-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__heading {
+    font-size: 24px;
+    color: var(--white);
+    font-weight: 400;
+  }
+}

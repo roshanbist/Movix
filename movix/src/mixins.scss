@@ -1,0 +1,33 @@
+$breakpoints-up: (
+  'medium': '768px',
+  'large': '1024px',
+  'xlarge': '1400px',
+);
+
+// 639px, 1149px, 1399px
+$breakpoints-down: (
+  'small': '640px',
+  'medium': '767px',
+  'large': '1024px',
+  'xlarge': '1400px',
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+@mixin ellipsis($line: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
